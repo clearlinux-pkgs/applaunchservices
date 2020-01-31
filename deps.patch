@@ -1,0 +1,14 @@
+--- applaunchservices-0.2.1/setup.py~	2019-10-16 16:52:20.000000000 +0000
++++ applaunchservices-0.2.1/setup.py	2020-01-31 15:40:29.194427947 +0000
+@@ -29,7 +29,6 @@
+         "Operating System :: MacOS",
+     ],
+     install_requires=[
+-        'pyobjc',
+         ],
+     tests_require=[
+         'PyQt5',
+--- applaunchservices-0.2.1/applaunchservices.egg-info/requires.txt~	2019-10-16 16:52:44.000000000 +0000
++++ applaunchservices-0.2.1/applaunchservices.egg-info/requires.txt	2020-01-31 15:40:49.514427665 +0000
+@@ -1 +0,0 @@
+-pyobjc

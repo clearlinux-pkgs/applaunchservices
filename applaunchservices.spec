@@ -4,7 +4,7 @@
 #
 Name     : applaunchservices
 Version  : 0.2.1
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/d7/55/d355acc279722b00b4c4baa002d84f142dfd7ff32336fcb3921cd1fc348f/applaunchservices-0.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d7/55/d355acc279722b00b4c4baa002d84f142dfd7ff32336fcb3921cd1fc348f/applaunchservices-0.2.1.tar.gz
 Summary  : Simple package for registering an app with apple Launch Services to handle UTI and URL
@@ -14,6 +14,7 @@ Requires: applaunchservices-license = %{version}-%{release}
 Requires: applaunchservices-python = %{version}-%{release}
 Requires: applaunchservices-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+Patch1: deps.patch
 
 %description
 # applaunchservices
@@ -48,13 +49,14 @@ python3 components for the applaunchservices package.
 %prep
 %setup -q -n applaunchservices-0.2.1
 cd %{_builddir}/applaunchservices-0.2.1
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580408220
+export SOURCE_DATE_EPOCH=1580485325
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
