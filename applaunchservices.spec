@@ -4,7 +4,7 @@
 #
 Name     : applaunchservices
 Version  : 0.2.1
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/d7/55/d355acc279722b00b4c4baa002d84f142dfd7ff32336fcb3921cd1fc348f/applaunchservices-0.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d7/55/d355acc279722b00b4c4baa002d84f142dfd7ff32336fcb3921cd1fc348f/applaunchservices-0.2.1.tar.gz
 Summary  : Simple package for registering an app with apple Launch Services to handle UTI and URL
