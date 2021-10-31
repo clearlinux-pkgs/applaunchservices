@@ -4,7 +4,7 @@
 #
 Name     : applaunchservices
 Version  : 0.2.1
-Release  : 18
+Release  : 19
 URL      : https://files.pythonhosted.org/packages/d7/55/d355acc279722b00b4c4baa002d84f142dfd7ff32336fcb3921cd1fc348f/applaunchservices-0.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d7/55/d355acc279722b00b4c4baa002d84f142dfd7ff32336fcb3921cd1fc348f/applaunchservices-0.2.1.tar.gz
 Summary  : Simple package for registering an app with apple Launch Services to handle UTI and URL
@@ -17,8 +17,10 @@ BuildRequires : buildreq-distutils3
 Patch1: deps.patch
 
 %description
-# applaunchservices
 Simple package for registering an app with apple Launch Services to handle UTI and URL. See Apple documentations for details.
+        
+        ## URL
+        Launch Services allows a GUI app to register a URL scheme.
 
 %package license
 Summary: license components for the applaunchservices package.
@@ -41,6 +43,7 @@ python components for the applaunchservices package.
 Summary: python3 components for the applaunchservices package.
 Group: Default
 Requires: python3-core
+Provides: pypi(applaunchservices)
 
 %description python3
 python3 components for the applaunchservices package.
@@ -56,16 +59,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585321526
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1635703369
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
